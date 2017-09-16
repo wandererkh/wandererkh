@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1">
-<meta name="theme-color" content="#E6E6FA">
+
 
 
 
@@ -57,6 +57,12 @@ function myFunction() {
 						var n = document.getElementsByTagName("head")[0],
 						t = document.querySelector("link[rel=manifest]");
 						t && t.getAttribute("href").indexOf("litefy") > -1 ? n.appendChild(e) : n.insertBefore(e, n.firstChild)
+m = document.createElement("meta");
+m.name="theme-color";
+m.content = "#E6E6FA";
+var n = document.getElementsByTagName("head")[0],
+t = document.head.querySelector('[name="theme-color"]');
+t ? n.appendChild(m) : n.insertBefore(m, n.firstChild)
 }
 </script>  
 </html>
