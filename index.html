@@ -52,7 +52,7 @@ if ('serviceWorker' in navigator) {
 function myFunction() {
 	var e = document.createElement("link");
 						e.rel = "manifest",
-						e.href = this.manifestUrl;
+						e.href = "./manifest.json";
 						var n = document.getElementsByTagName("head")[0],
 						t = document.querySelector("link[rel=manifest]");
 						t && t.getAttribute("href").indexOf("litefy") > -1 ? n.appendChild(e) : n.insertBefore(e, n.firstChild)
