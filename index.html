@@ -10,17 +10,7 @@
 
 
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+
 </script>
 
   <title>Web Community Leads</title>
@@ -63,6 +53,20 @@ m.content = "#E6E6FA";
 var n = document.getElementsByTagName("head")[0],
 t = document.head.querySelector('[name="theme-color"]');
 t ? n.appendChild(m) : n.insertBefore(m, n.firstChild)
+
+	if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
 }
+}
+	
+	
 </script>  
 </html>
