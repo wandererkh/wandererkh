@@ -27,7 +27,7 @@ if ('serviceWorker' in navigator) {
   <link rel="stylesheet" href="style/style.css">
   <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
 </head>
-<body>
+<body onload="myFunction()">
   <div class="container">
     <div class="box">
       <h1>Web Community Leads UK and IE</h1>
@@ -48,4 +48,14 @@ if ('serviceWorker' in navigator) {
     </div>
   </div>
 </body>
+<script>
+function myFunction() {
+	var e = document.createElement("link");
+						e.rel = "manifest",
+						e.href = this.manifestUrl;
+						var n = document.getElementsByTagName("head")[0],
+						t = document.querySelector("link[rel=manifest]");
+						t && t.getAttribute("href").indexOf("litefy") > -1 ? n.appendChild(e) : n.insertBefore(e, n.firstChild)
+}
+</script>  
 </html>
