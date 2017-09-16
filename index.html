@@ -31,7 +31,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="box" onload="myFunction()">
+    <div class="box">
       <h1>Web Community Leads UK and IE</h1>
       <br>
       <p>Web Community Leads UK and IE is a network of people who run meet up groups or similar events focused around web technologies.
@@ -51,6 +51,11 @@
   </div>
 </body>
 <script>
+
+	window.addEventListener('load', function() {
+    myFunction();
+}
+	
 function myFunction() {
 	var e = document.createElement("link");
 						e.rel = "manifest",
